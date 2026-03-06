@@ -118,10 +118,14 @@ Thank you!\n`,
       }
       return res.redirect('/login/2fa');
     }
-    req.logIn(user, (err) => {
+    req.logIn(user, async (err) => {
       if (err) {
         return next(err);
       }
+
+      user.lastLogin = new Date();
+      await user.save();
+
       req.flash('success', { msg: 'Success! You are logged in.' });
       res.redirect(req.session.returnTo || '/');
     });

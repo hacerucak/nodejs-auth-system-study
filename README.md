@@ -1,3 +1,73 @@
+# Node.js Authentication System Analysis & Feature Extension
+
+This repository is a technical analysis and extension of an open-source Node.js authentication system.
+
+The purpose of this study is to understand how a real-world authentication system is structured and how core backend components interact with each other.
+
+## Project Analysis
+
+During this study I analyzed the architecture of a production-level authentication system built with Node.js and Express.
+
+Main topics explored:
+
+- Authentication flow using Passport.js
+- User schema design with MongoDB & Mongoose
+- Password hashing with bcrypt
+- Session management
+- Middleware based authentication control
+- Security best practices in authentication systems
+
+## Feature Implemented
+
+### Last Login Tracking
+
+As part of this study, a new feature was implemented to track the last login time of users.
+
+#### Implementation Details
+
+- Added `lastLogin` field to the User schema
+- Updated login controller to record login timestamp
+- Stored login activity in MongoDB
+- Verified successful persistence via MongoDB Compass
+
+Example stored data:
+lastLogin: 2026-03-06T17:10:44.761+00:00
+
+This feature is commonly used in production systems for:
+
+- account activity monitoring
+- security tracking
+- user analytics
+
+## Technologies Used
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Passport.js
+- bcrypt
+
+## Learning Outcomes
+
+Through this project I gained hands-on experience with:
+
+- authentication system architecture
+- backend security practices
+- MongoDB schema design
+- extending existing open-source projects
+
+---
+
+## Original Project
+
+This project is based on the open-source project below.
+
+Original repository:
+https://github.com/sahat/hackathon-starter
+
+The following section contains the original project documentation.
+
 ![](https://lh4.googleusercontent.com/-PVw-ZUM9vV8/UuWeH51os0I/AAAAAAAAD6M/0Ikg7viJftQ/w1286-h566-no/hackathon-starter-logo.jpg)
 Hackathon Starter
 =======================
